@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Online reader for archive of roleplay Lord of the Sea."
+    />
+    <meta name="application-name" content="LotS Reader" />
+    <meta
+      name="author"
+      content="Natyobb(archive, website), Pydrax Alpta(original website code), Don'tAtmey(author)"
+    />
+    <meta name="og:title" content="AG Reader" />
+    <meta name="og:type" content="website" />
+    <meta
+      name="og:description"
+      content="Online reader for archive of roleplay Lord of the Sea."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>LotS Reader</title>
+  </head>
+  <body>
+    <div class="selector">
+      <div class="row">
+        <button
+          title="Previous Chapter"
+          type="button"
+          class="round button"
+          id="prev-chapter"
+          name="prev-chapter"
+        >
+          <i class="prev icon" title="Previous Chapter">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40"
+              viewBox="0 -960 960 960"
+              width="40"
+            >
+              <path
+                fill="currentcolor"
+                d="M286.999-446.667 527-206.666 480-160 160-480l320-320 47 46.666-240.001 240.001H800v66.666H286.999Z"
+              />
+            </svg>
+          </i>
+        </button>
+        <div class="mobile-column">
+          <select
+            title="Select Chapter"
+            class="button"
+            name="chapter"
+            id="chapterselect"
+          ></select>
+          <select
+            title="Select Sub-Chapter"
+            class="button"
+            name="subchapter"
+            id="subchapterselect"
+          ></select>
+        </div>
+        <button
+          title="Next Chapter"
+          type="button"
+          class="round button"
+          id="next-chapter"
+          name="next-chapter"
+        >
+          <i class="next icon" title="Next Chapter">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40"
+              viewBox="0 -960 960 960"
+              width="40"
+            >
+              <path
+                fill="currentcolor"
+                d="M673.001-446.667H160v-66.666h513.001L433-753.334 480-800l320 320-320 320-47-46.666 240.001-240.001Z"
+              />
+            </svg>
+          </i>
+        </button>
+      </div>
+    </div>
+    <section class="contents">
+      <div id="loader" class="loading hidden"><span></span>Loading...</div>
+      <iframe title="LotS Chapter" frameborder="0" class="frame"></iframe>
+    </section>
+  </body>
+  <script src="script.js"></script>
+</html>

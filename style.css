@@ -1,0 +1,142 @@
+body {
+  position: fixed;
+  background: #36393ecc;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.contents {
+  padding: 0 0.25em;
+  height: 100%;
+}
+
+.frame {
+  height: calc(100% - 3.25em);
+  width: 100%;
+}
+
+@media screen and (width < 720px) {
+  .frame {
+    height: calc(100% - 6em);
+  }
+}
+
+.frame.noscroll {
+  width: 102%;
+}
+
+.selector {
+  margin-bottom: 0.5em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.selector .button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.125em;
+  width: 250px;
+  height: 3em;
+  background: #36393e99;
+  color: white;
+  border: 1px solid slategray;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+.selector .round.button {
+  height: 3em;
+  width: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 0;
+}
+.selector .button:hover {
+  color: #ddd;
+}
+
+button:disabled {
+  filter: opacity(0.3);
+  pointer-events: none;
+}
+
+.selector option {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.scroll-toggle {
+  background: #36393e99;
+  color: white;
+  border: 1px solid slategray;
+  margin: 0.5em;
+  padding: 0.5em;
+  height: 3em;
+}
+@media screen and (width < 720px) {
+  .selector button.scroll-toggle {
+    display: none;
+  }
+}
+
+.mobile-column {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media screen and (width < 720px) {
+  .mobile-column {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+.loading span {
+  margin: 0 0.5em;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border-color: white;
+  border-style: solid dashed solid dotted;
+  border-width: 3px;
+  animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
